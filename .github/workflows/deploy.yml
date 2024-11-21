@@ -48,5 +48,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            docker rm -f meu-app || true
             docker pull ${{ secrets.DOCKER_USERNAME }}/meu-app:latest
             docker run -d -p 8103:8103 --name meu-app ${{ secrets.DOCKER_USERNAME }}/meu-app:latest
