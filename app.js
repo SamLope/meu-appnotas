@@ -10,7 +10,7 @@ let notes = [];
 
 // Rota principal
 app.get('/', (req, res) => {
-  res.send('Bem-vindo à API de Notas Samir!');
+  res.send('Bem-vindo à API de Notas Vollo!');
 });
 
 // Criar uma nova nota
